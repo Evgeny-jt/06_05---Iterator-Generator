@@ -1,29 +1,16 @@
 import types
 
 
-def flat_generator(list_of_lists):
-
-    n=1
-
-
-    for list_ in list_of_lists:
+def flat_generator(list_of_lists_1):
+    for list_ in list_of_lists_1:
+        print('-', list_)
         for item in list_:
-            print(item)
-            if n != 5:
-                yield (item)
-                print('-')
-            else:
-                print('----')
-                yield (5)
-            n += 1
+            print('--', item)
+            yield (item)
     return
-
-    # yield
-    # ...
 
 
 def test_2():
-
     list_of_lists_1 = [
         ['a', 'b', 'c'],
         ['d', 'e', 'f', 'h', False],
@@ -34,8 +21,6 @@ def test_2():
             flat_generator(list_of_lists_1),
             ['a', 'b', 'c', 'd', 'e', 'f', 'h', False, 1, 2, None]
     ):
-
-
         assert flat_iterator_item == check_item
 
     assert list(flat_generator(list_of_lists_1)) == ['a', 'b', 'c', 'd', 'e', 'f', 'h', False, 1, 2, None]

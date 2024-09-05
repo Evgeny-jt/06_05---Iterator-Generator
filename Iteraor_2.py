@@ -15,7 +15,7 @@ class FlatIterator:
         return self.items[self.index-1]
 
 def attachment(attachment_list, items): #перебираем элементы
-    for n, item in enumerate(attachment_list):
+    for item in attachment_list:
         items = item_list(item, items)
     return items
 
@@ -27,7 +27,8 @@ def item_list(item, items): # проверяем из чего состоит э
 
     return items
 
-def item_save(item, items): # сохраняем найденный элемент
+
+def item_save(item, items):  # сохраняем найденный элемент
     items.append(item)
     return items
 

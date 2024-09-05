@@ -17,7 +17,7 @@ class FlatIterator:
         if self.index == len(self.items):
             raise StopIteration
         self.index += 1
-        return self.items[self.index-1]
+        return self.items[self.index - 1]
 
 
 def test_1():
